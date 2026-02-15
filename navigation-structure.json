@@ -1,0 +1,285 @@
+{
+  "navigationStructure": {
+    "topLevel": [
+      {
+        "label": "Home",
+        "url": "#home",
+        "type": "link"
+      },
+      {
+        "label": "About",
+        "type": "dropdown",
+        "children": [
+          {
+            "label": "About WCE",
+            "url": "#about-wce",
+            "description": "Learn about our mission and values"
+          },
+          {
+            "label": "Managing Director's Message",
+            "url": "#md-message",
+            "description": "Message from our leadership"
+          }
+        ]
+      },
+      {
+        "label": "Opportunities",
+        "type": "mega-menu",
+        "sections": [
+          {
+            "title": "Study Abroad",
+            "items": [
+              {
+                "label": "USA",
+                "url": "#study-usa",
+                "flag": "public/flages/us.svg"
+              },
+              {
+                "label": "UK",
+                "url": "#study-uk",
+                "flag": "public/flages/uk.svg"
+              },
+              {
+                "label": "Germany",
+                "url": "#study-germany",
+                "flag": "public/flages/germany.svg"
+              },
+              {
+                "label": "Ireland",
+                "url": "#study-ireland",
+                "flag": "public/flages/ireland.svg"
+              },
+              {
+                "label": "France",
+                "url": "#study-france",
+                "flag": "public/flages/fr.svg"
+              },
+              {
+                "label": "Italy",
+                "url": "#study-italy",
+                "flag": "public/flages/it.svg"
+              },
+              {
+                "label": "Netherlands",
+                "url": "#study-netherlands",
+                "flag": "public/flages/netherlands.svg"
+              },
+              {
+                "label": "Japan",
+                "url": "#study-japan",
+                "flag": "public/flages/jp.svg"
+              },
+              {
+                "label": "Canada",
+                "url": "#study-canada",
+                "flag": "public/flages/canada.svg"
+              },
+              {
+                "label": "Australia",
+                "url": "#study-australia",
+                "flag": "public/flages/australia.svg"
+              },
+              {
+                "label": "New Zealand",
+                "url": "#study-newzealand",
+                "flag": "public/flages/newzealand.svg"
+              }
+            ]
+          },
+          {
+            "title": "International Internship",
+            "items": [
+              {
+                "label": "USA",
+                "url": "#internship-usa",
+                "flag": "public/flages/us.svg"
+              },
+              {
+                "label": "UAE",
+                "url": "#internship-uae",
+                "icon": "fas fa-building"
+              },
+              {
+                "label": "Japan",
+                "url": "#internship-japan",
+                "flag": "public/flages/jp.svg"
+              },
+              {
+                "label": "France",
+                "url": "#internship-france",
+                "flag": "public/flages/fr.svg"
+              },
+              {
+                "label": "Maldives",
+                "url": "#internship-maldives",
+                "flag": "public/flages/mu.svg"
+              },
+              {
+                "label": "Thailand",
+                "url": "#internship-thailand",
+                "icon": "fas fa-map"
+              },
+              {
+                "label": "Oman",
+                "url": "#internship-oman",
+                "icon": "fas fa-map"
+              },
+              {
+                "label": "Bahrain",
+                "url": "#internship-bahrain",
+                "icon": "fas fa-map"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Test Prep",
+        "type": "dropdown",
+        "children": [
+          {
+            "label": "IELTS",
+            "url": "#ielts",
+            "description": "English language proficiency",
+            "icon": "fas fa-book"
+          },
+          {
+            "label": "TOEFL",
+            "url": "#toefl",
+            "description": "Test of English",
+            "icon": "fas fa-book-open"
+          },
+          {
+            "label": "PTE",
+            "url": "#pte",
+            "description": "Pearson Test of English",
+            "icon": "fas fa-file-alt"
+          },
+          {
+            "label": "GRE",
+            "url": "#gre",
+            "description": "Graduate Record Exam",
+            "icon": "fas fa-graduation-cap"
+          },
+          {
+            "label": "GMAT",
+            "url": "#gmat",
+            "description": "Business school admission",
+            "icon": "fas fa-chart-bar"
+          },
+          {
+            "label": "SAT",
+            "url": "#sat",
+            "description": "College admission test",
+            "icon": "fas fa-pencil-alt"
+          }
+        ]
+      },
+      {
+        "label": "Experiences",
+        "type": "dropdown",
+        "children": [
+          {
+            "label": "Immersion Tours",
+            "url": "#immersion-tours",
+            "description": "Cultural immersion programs",
+            "icon": "fas fa-globe"
+          },
+          {
+            "label": "Testimonials",
+            "url": "#testimonials",
+            "description": "Student success stories",
+            "icon": "fas fa-star"
+          },
+          {
+            "label": "Student Connect",
+            "url": "#student-connect",
+            "description": "Connect with students",
+            "icon": "fas fa-users"
+          },
+          {
+            "label": "Competitions",
+            "url": "#competitions",
+            "description": "Academic competitions",
+            "icon": "fas fa-trophy"
+          },
+          {
+            "label": "Celebrity Visit",
+            "url": "#celebrity-visit",
+            "description": "Special guest appearances",
+            "icon": "fas fa-star"
+          },
+          {
+            "label": "CSR",
+            "url": "#csr",
+            "description": "Corporate social responsibility",
+            "icon": "fas fa-hand-holding-heart"
+          },
+          {
+            "label": "Events",
+            "url": "#events",
+            "description": "Upcoming events",
+            "icon": "fas fa-calendar-alt"
+          },
+          {
+            "label": "Achievements",
+            "url": "#achievements",
+            "description": "Awards and recognition",
+            "icon": "fas fa-award"
+          }
+        ]
+      },
+      {
+        "label": "Contact",
+        "type": "dropdown",
+        "children": [
+          {
+            "label": "General Inquiry",
+            "url": "#contact-general",
+            "description": "Contact form and general info",
+            "icon": "fas fa-envelope"
+          },
+          {
+            "label": "Navi Mumbai",
+            "url": "#contact-navi-mumbai",
+            "description": "Main office location",
+            "icon": "fas fa-map-marker-alt"
+          },
+          {
+            "label": "Pune",
+            "url": "#contact-pune",
+            "description": "Branch office",
+            "icon": "fas fa-map-marker-alt"
+          },
+          {
+            "label": "Chennai",
+            "url": "#contact-chennai",
+            "description": "Branch office",
+            "icon": "fas fa-map-marker-alt"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Book Counseling",
+      "url": "#book-counseling",
+      "type": "primary-button"
+    }
+  },
+  "features": {
+    "hierarchical": true,
+    "mobileResponsive": true,
+    "megaMenu": true,
+    "hamburgerToggle": true,
+    "collapsibleDropdowns": true,
+    "maxTopLevelItems": 7,
+    "groupedLogically": true,
+    "userFriendlyLabels": true
+  },
+  "mobileFeatures": {
+    "hamburgerMenu": true,
+    "collapsibleSections": true,
+    "touchFriendly": true,
+    "stackedLayout": true
+  }
+}
