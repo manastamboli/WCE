@@ -2404,6 +2404,7 @@ body.mobile-menu-open {
 
   .testimonial-card {
     width: 100%;
+    flex-shrink: 0;
   }
 
   .testimonials-header {
