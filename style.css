@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .header {
   background: rgba(245, 247, 250, 0.95);
   backdrop-filter: blur(10px);
@@ -985,7 +989,7 @@ body.mobile-menu-open {
 .form-submit-btn:hover { background: var(--royal-blue-600); }
 
 /* Highlights grid */
-.highlights-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; margin-top:2rem; margin-bottom: 2rem; }
+.highlights-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:1.5rem; margin-top:2rem; margin-bottom: 2rem; }
 .highlight-card { background: #ffffff; padding: 2.5rem; border-radius: 20px; border: 1px solid #e5e7eb; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; }
 .highlight-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0, 86, 179, 0.15); border-color: var(--royal-blue); }
 .highlight-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--royal-blue) 0%, var(--royal-blue-600) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2rem; margin-bottom: 1.5rem; }
@@ -995,17 +999,47 @@ body.mobile-menu-open {
 .about-intro { max-width: 900px; margin: 0 auto 2rem; font-size: 1.05rem; line-height: 1.8; color: #4b5563; }
 
 /* Study areas */
-.areas-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; margin-top:2rem; margin-bottom: 2rem; }
+.areas-grid { display:grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap:1.5rem; margin-top:2rem; margin-bottom: 2rem; }
 .area-card { background: #ffffff; padding: 2.5rem; border-radius: 20px; border: 1px solid #e5e7eb; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; height: 100%; }
+.area-card { grid-column: span 2; }
+.area-card.area-card-wide { grid-column: span 3; }
 .area-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0, 86, 179, 0.15); border-color: var(--royal-blue); }
 .area-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--royal-blue) 0%, var(--royal-blue-600) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2rem; margin-bottom: 1.5rem; }
 .area-card h4 { margin-bottom: 1rem; color: #1f2937; font-size: 1.25rem; font-weight: 700; }
 .area-card p { font-size: 1rem; color: #6b7280; line-height: 1.6; margin: 0; }
 
 /* WCE Advantage */
-.advantage-list { display:flex; flex-direction:column; gap:0.75rem; margin-top:1rem; }
-.advantage-item { display:flex; gap:0.75rem; align-items:center; background:#fff; padding:0.9rem 1rem; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.05); }
-.advantage-item i { color:var(--royal-blue); font-size:18px; }
+.advantage-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin-top:2rem; margin-bottom: 1rem; }
+.advantage-card { background: #ffffff; padding: 2rem; border-radius: 18px; border: 1px solid #e5e7eb; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; height: 100%; text-align: left; }
+.advantage-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0, 86, 179, 0.15); border-color: var(--royal-blue); }
+.advantage-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--royal-blue) 0%, var(--royal-blue-600) 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 1.6rem; margin-bottom: 1.25rem; }
+.advantage-card h3 { margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; color: #1f2937; }
+.advantage-card p { margin: 0; font-size: 0.98rem; color: #6b7280; line-height: 1.6; }
+
+/* Contact Section */
+.contact-section { background: #f7f9fc; padding: 60px 5%; }
+.section-subtitle { margin-top: 0.5rem; color: #6b7280; font-size: 1rem; }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; }
+.contact-content h3 { font-size: 1.5rem; color: #1f2937; margin-bottom: 0.75rem; }
+.contact-content p { color: #6b7280; line-height: 1.7; margin-bottom: 1.25rem; }
+.contact-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.contact-points li { display: flex; gap: 0.75rem; align-items: center; color: #1f2937; }
+.contact-points i { color: var(--royal-blue); }
+.contact-form-card { background: #ffffff; padding: 2rem; border-radius: 18px; border: 1px solid #e5e7eb; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+
+.seats-urgency { margin-top: 1.5rem; padding: 1rem 1.25rem; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.seats-label { font-weight: 700; color: #1f2937; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+.seats-label i { color: var(--royal-blue); }
+.seats-bar { width: 100%; height: 10px; background: #e5e7eb; border-radius: 999px; overflow: hidden; position: relative; }
+.seats-fill { display: block; height: 100%; width: 78%; background: linear-gradient(90deg, var(--royal-blue), #2f80ed); border-radius: 999px; animation: seatsPulse 1.6s ease-in-out infinite; }
+.seats-meta { margin-top: 0.65rem; font-size: 0.9rem; color: #6b7280; }
+
+@keyframes seatsPulse {
+  0% { transform: scaleX(0.92); opacity: 0.7; }
+  50% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0.92); opacity: 0.7; }
+}
+
 
 /* Sticky footer CTA */
 :root { --sticky-footer-height: 100px; }
@@ -1014,6 +1048,7 @@ body { padding-bottom: var(--sticky-footer-height); }
 .sticky-footer-cta .sticky-inner { display:flex; align-items:center; justify-content:space-between; padding:12px 5%; max-width:1400px; margin:0 auto; }
 .sticky-footer-cta h3 { margin:0; font-size:1.1rem; }
 .sticky-footer-cta p { margin:0.25rem 0 0 0; }
+.sticky-footer-cta .sticky-phone-link { color: #fff7cc; text-decoration: underline; font-weight: 600; }
 .sticky-footer-cta a.btn { background:#fff; color:var(--royal-blue); padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; }
 .sticky-footer-cta small { display:block; margin-top:6px; opacity:0.9; }
 
@@ -1024,7 +1059,11 @@ body { padding-bottom: var(--sticky-footer-height); }
   .sticky-footer-cta .sticky-inner { flex-direction:column; gap:8px; align-items:flex-start; }
   /* Ensure the WCE Advantage and other bottom sections have extra breathing room */
   .wce-advantage, .study-areas, .about-section { padding-bottom: 1.25rem; }
-  .advantage-list { margin-bottom: 1rem; }
+  .advantage-grid { grid-template-columns: 1fr; margin-bottom: 1rem; }
+  .highlights-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr; }
+  .area-card, .area-card.area-card-wide { grid-column: auto; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
  
 
@@ -3156,8 +3195,11 @@ footer {
   color: #3b82f6;
 }
 
-.sticky-item.email {
-  color: #ef4444;
+.sticky-item.brochure {
+  color: var(--royal-blue);
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .sticky-item svg {
@@ -3169,6 +3211,18 @@ footer {
   font-weight: 500;
 }
 
+/* Contact modal */
+.contact-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1300; }
+.contact-modal.is-open { display: flex; }
+.contact-modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
+.contact-modal-dialog { position: relative; background: #ffffff; border-radius: 18px; padding: 1.5rem; width: min(520px, 92vw); max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+.contact-modal-dialog h3 { margin-bottom: 0.5rem; }
+.contact-modal-dialog p { margin-bottom: 1rem; color: #6b7280; }
+.contact-modal-close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: none; background: #f3f4f6; border-radius: 50%; cursor: pointer; }
+.contact-modal-close::before, .contact-modal-close::after { content: ""; position: absolute; top: 50%; left: 50%; width: 14px; height: 2px; background: #374151; transform-origin: center; }
+.contact-modal-close::before { transform: translate(-50%, -50%) rotate(45deg); }
+.contact-modal-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
 @media (max-width: 768px) {
   .mobile-sticky-bar {
     display: flex;
@@ -3178,5 +3232,9 @@ footer {
 
   body {
     padding-bottom: 70px;
+  }
+
+  .sticky-footer-cta {
+    display: none;
   }
 }
