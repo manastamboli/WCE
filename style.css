@@ -2159,6 +2159,7 @@ body.mobile-menu-open {
   backdrop-filter: blur(20px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .testimonials-track {
@@ -2170,6 +2171,7 @@ body.mobile-menu-open {
 
 .testimonial-card {
   min-width: 100%;
+  flex-shrink: 0;
   padding: 3.5rem;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -2179,6 +2181,7 @@ body.mobile-menu-open {
   border: 1px solid rgba(30, 136, 229, 0.1);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .testimonial-card::before {
