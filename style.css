@@ -1027,23 +1027,6 @@ body.mobile-menu-open {
 .contact-points i { color: var(--royal-blue); }
 .contact-form-card { background: #ffffff; padding: 2rem; border-radius: 18px; border: 1px solid #e5e7eb; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
 
-/* Enrollment Section */
-.enrollment-section { padding: 70px 5%; background: #ffffff; }
-.industry-marquee { margin-top: 1.5rem; margin-bottom: 2rem; overflow: hidden; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 14px; }
-.marquee-track { display: flex; gap: 1rem; padding: 0.85rem 1rem; width: max-content; animation: marqueeScroll 18s linear infinite; }
-.marquee-item { white-space: nowrap; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.9rem; color: #1f2937; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-.enrollment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.enrollment-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 18px; padding: 2rem; text-align: left; position: relative; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.05); }
-.enrollment-card::after { content: ""; position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: rgba(0,86,179,0.08); border-radius: 50%; }
-.enrollment-stat { font-size: 2rem; font-weight: 800; color: var(--royal-blue); margin-bottom: 0.5rem; }
-.enrollment-label { font-size: 1.05rem; font-weight: 600; color: #111827; margin-bottom: 0.35rem; }
-.enrollment-meta { font-size: 0.92rem; color: #6b7280; }
-
-@keyframes marqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 .seats-urgency { margin-top: 1.5rem; padding: 1rem 1.25rem; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
 .seats-label { font-weight: 700; color: #1f2937; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
 .seats-label i { color: var(--royal-blue); }
@@ -1081,31 +1064,6 @@ body { padding-bottom: var(--sticky-footer-height); }
   .areas-grid { grid-template-columns: 1fr; }
   .area-card, .area-card.area-card-wide { grid-column: auto; }
   .contact-grid { grid-template-columns: 1fr; }
-
-  .contact-modal-dialog {
-    padding: 1.25rem;
-    width: 92vw;
-    border-radius: 16px;
-  }
-
-  .contact-modal .form-input-wrapper input,
-  .contact-modal .form-input-wrapper select {
-    font-size: 0.95rem;
-  }
-
-  .contact-modal .form-submit-btn {
-    width: 100%;
-  }
-
-  .enrollment-section { padding: 50px 5%; }
-  .industry-marquee { margin-top: 1rem; margin-bottom: 1.5rem; }
-  .marquee-track { gap: 0.75rem; padding: 0.75rem 0.75rem; animation-duration: 24s; }
-  .enrollment-grid { grid-template-columns: 1fr; margin-top: 1.25rem; }
-  .enrollment-card { padding: 1.25rem; text-align: center; }
-  .enrollment-card::after { width: 90px; height: 90px; top: -30px; right: -30px; }
-  .enrollment-stat { font-size: 1.5rem; }
-  .enrollment-label { font-size: 1rem; }
-  .enrollment-meta { font-size: 0.88rem; }
 }
  
 
