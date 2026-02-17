@@ -2482,6 +2482,16 @@ footer {
   transition: opacity 0.3s ease;
 }
 
+.footer-brochure-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
 .footer-col ul li:hover {
   opacity: 1;
 }
@@ -3212,16 +3222,37 @@ footer {
 }
 
 /* Contact modal */
-.contact-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1300; }
+.contact-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1300; padding: 1rem; }
 .contact-modal.is-open { display: flex; }
-.contact-modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
-.contact-modal-dialog { position: relative; background: #ffffff; border-radius: 18px; padding: 1.5rem; width: min(520px, 92vw); max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
-.contact-modal-dialog h3 { margin-bottom: 0.5rem; }
-.contact-modal-dialog p { margin-bottom: 1rem; color: #6b7280; }
-.contact-modal-close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: none; background: #f3f4f6; border-radius: 50%; cursor: pointer; }
+.contact-modal-overlay { position: absolute; inset: 0; background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(2px); }
+.contact-modal-dialog { position: relative; background: #ffffff; border-radius: 22px; padding: 1.75rem; width: min(560px, 94vw); max-height: 90vh; overflow-y: auto; box-shadow: 0 24px 80px rgba(0,0,0,0.3); border: 1px solid #e5e7eb; }
+.contact-modal-dialog h3 { margin-bottom: 0.35rem; font-size: 1.4rem; color: #111827; }
+.contact-modal-dialog p { margin-bottom: 1.25rem; color: #6b7280; font-size: 0.98rem; line-height: 1.6; }
+.contact-modal-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 50%; cursor: pointer; display: grid; place-items: center; transition: background 0.2s ease; }
+.contact-modal-close:hover { background: #e5e7eb; }
 .contact-modal-close::before, .contact-modal-close::after { content: ""; position: absolute; top: 50%; left: 50%; width: 14px; height: 2px; background: #374151; transform-origin: center; }
 .contact-modal-close::before { transform: translate(-50%, -50%) rotate(45deg); }
 .contact-modal-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.contact-modal .contact-form { display: grid; gap: 1rem; }
+.contact-modal .form-group label { font-size: 0.85rem; color: #374151; }
+.contact-modal .form-input-wrapper input,
+.contact-modal .form-input-wrapper select {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+.contact-modal .form-input-wrapper input:focus,
+.contact-modal .form-input-wrapper select:focus {
+  border-color: var(--royal-blue);
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.12);
+}
+.contact-modal .brochure-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
 
 @media (max-width: 768px) {
   .mobile-sticky-bar {

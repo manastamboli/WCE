@@ -580,7 +580,7 @@
             <div class="footer-col">
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="public/images/hero-poster.webp" download style="color: #fff; text-decoration: none;">Download Brochure</a></li>
+                    <li><button type="button" class="footer-brochure-btn brochure-trigger">Download Brochure</button></li>
                     <li><a href="#faq" style="color: #fff; text-decoration: none;">FAQs</a></li>
                     <li><a href="tel:+919565595055" style="color: #fff; text-decoration: none;"><i class="fas fa-phone" style="margin-right: 8px;"></i>+91 9565595055</a></li>
                     <li><a href="mailto:info@wisdomcareereducation.org" style="color: #fff; text-decoration: none;"><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@wisdomcareereducation.org</a></li>
@@ -613,7 +613,7 @@
                 <small>*T&C Apply.</small>
             </div>
             <div class="sticky-actions">
-                <a href="public/images/hero-poster.webp" class="btn btn-secondary" download>Download Brochure</a>
+                <button type="button" class="btn btn-secondary brochure-trigger">Download Brochure</button>
             </div>
         </div>
     </div>
@@ -645,8 +645,8 @@
         <div class="contact-modal-overlay" data-close="true"></div>
         <div class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
             <button type="button" class="contact-modal-close" aria-label="Close"></button>
-            <h3 id="contactModalTitle">Book Your Career Call</h3>
-            <p>Book your seats today and get expert guidance for Germany public universities.</p>
+            <h3 id="contactModalTitle">Download the Germany Brochure</h3>
+            <p>Get the latest intake details, eligibility checklist, and course shortlist for public universities in Germany.</p>
             <form class="contact-form" id="contactModalForm" novalidate>
                 <div class="form-group">
                     <label for="contactModalName">Full Name <span class="required">*</span></label>
@@ -671,31 +671,7 @@
                         <input type="tel" id="contactModalPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="contactModalCourse">Preferred Course</label>
-                    <div class="form-input-wrapper">
-                        <i class="fas fa-graduation-cap"></i>
-                        <select id="contactModalCourse" name="preferredCourse">
-                            <option value="">Select course</option>
-                            <option>Engineering & Technology</option>
-                            <option>Business & Management</option>
-                            <option>Computer & IT</option>
-                            <option>Healthcare & Sciences</option>
-                            <option>Arts & Social Sciences</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="contactModalCity">City</label>
-                    <div class="form-input-wrapper">
-                        <i class="fas fa-city"></i>
-                        <input type="text" id="contactModalCity" name="city" placeholder="City of preference">
-                    </div>
-                </div>
-
-                <button type="submit" class="form-submit-btn">Book Your Career Call</button>
+                <a href="public/images/hero-poster.webp" class="form-submit-btn brochure-download" download>Download Brochure</a>
             </form>
         </div>
     </div>
@@ -979,8 +955,8 @@
             // Initialize Apply Now form
             initApplyForm();
 
-            // Mobile brochure modal
-            const brochureBtn = document.querySelector('.mobile-sticky-bar .sticky-item.brochure');
+            // Brochure modal
+            const brochureButtons = document.querySelectorAll('.brochure-trigger, .mobile-sticky-bar .sticky-item.brochure');
             const contactModal = document.querySelector('.contact-modal');
             const contactModalOverlay = document.querySelector('.contact-modal-overlay');
             const contactModalClose = document.querySelector('.contact-modal-close');
@@ -999,8 +975,8 @@
                 document.body.classList.remove('modal-open');
             }
 
-            if (brochureBtn) {
-                brochureBtn.addEventListener('click', openContactModal);
+            if (brochureButtons.length) {
+                brochureButtons.forEach(btn => btn.addEventListener('click', openContactModal));
             }
             if (contactModalOverlay) {
                 contactModalOverlay.addEventListener('click', closeContactModal);
