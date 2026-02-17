@@ -54,7 +54,15 @@
                 </a>
             </div>
 
-            <!-- Navigation menus removed per request; only expert contact button retained -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Why Germany</a></li>
+                <li class="nav-item"><a href="#study-areas" class="nav-link">Study Areas</a></li>
+                
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Success Stories</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
 
             <div class="auth-buttons">
                 <a href="#contact" class="btn btn-get-started">Talk to an Expert</a>
@@ -80,6 +88,14 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
+
+        <li class="nav-item"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link" role="menuitem">Why Study in Germany</a></li>
+        <li class="nav-item"><a href="#study-areas" class="nav-link" role="menuitem">Study Areas</a></li>
+        <li class="nav-item"><a href="#wce-advantage" class="nav-link" role="menuitem">WCE Advantage</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link" role="menuitem">Success Stories</a></li>
+        <li class="nav-item"><a href="#faq" class="nav-link" role="menuitem">FAQs</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link" role="menuitem">Contact Us</a></li>
 
         <div class="mobile-auth-buttons">
             <a href="#contact" class="btn btn-get-started">Talk to an Expert</a>
@@ -493,12 +509,9 @@
                         <li><i class="fas fa-check-circle"></i> Scholarships and funding support</li>
                         <li><i class="fas fa-check-circle"></i> Pre-departure checklist & orientation</li>
                     </ul>
-                    <div class="seats-urgency" aria-live="polite">
-                        <div class="seats-label"><i class="fas fa-clock"></i> Seats Filling Fast</div>
-                        <div class="seats-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78">
-                            <span class="seats-fill"></span>
-                        </div>
-                        <div class="seats-meta">Limited seats left for upcoming intakes</div>
+                    <div class="seats-pulse" aria-live="polite">
+                        <span class="pulse-dot"></span>
+                        <span class="pulse-text">Seats Filling Fast</span>
                     </div>
                 </div>
 
@@ -1007,53 +1020,77 @@
             const autoPlayDelay = 5000; // 5 seconds
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+            function getSlidesPerView() {
+                return window.innerWidth >= 1025 ? 2 : 1;
+            }
+
+            function getTotalSlides() {
+                return Math.ceil(cards.length / getSlidesPerView());
+            }
+
+            function updateDots(totalSlides, activeIndex) {
+                dots.forEach((dot, i) => {
+                    if (i < totalSlides) {
+                        dot.style.display = 'inline-flex';
+                        const isActive = i === activeIndex;
+                        dot.classList.toggle('active', isActive);
+                        dot.setAttribute('aria-selected', isActive);
+                        dot.setAttribute('aria-hidden', 'false');
+                    } else {
+                        dot.style.display = 'none';
+                        dot.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+
             // Update carousel position
             function updateCarousel(index, animate = true) {
-                currentIndex = index;
+                const slidesPerView = getSlidesPerView();
+                const totalSlides = getTotalSlides();
+                const safeIndex = Math.max(0, Math.min(index, totalSlides - 1));
+                currentIndex = safeIndex;
 
                 // Update track position
-                if (animate && !prefersReducedMotion) {
-                    track.style.transform = `translateX(-${index * 100}%)`;
-                } else {
-                    track.style.transform = `translateX(-${index * 100}%)`;
-                }
+                const offset = safeIndex * 100;
+                track.style.transform = `translateX(-${offset}%)`;
 
-                // Update active card
+                // Update active cards
+                const start = safeIndex * slidesPerView;
+                const end = start + slidesPerView;
                 cards.forEach((card, i) => {
-                    card.classList.toggle('active', i === index);
+                    card.classList.toggle('active', i >= start && i < end);
                 });
 
                 // Update pagination dots
-                dots.forEach((dot, i) => {
-                    const isActive = i === index;
-                    dot.classList.toggle('active', isActive);
-                    dot.setAttribute('aria-selected', isActive);
-                });
+                updateDots(totalSlides, safeIndex);
 
                 // Update arrow states
                 if (prevBtn) {
-                    prevBtn.disabled = index === 0;
+                    prevBtn.disabled = safeIndex === 0;
                 }
                 if (nextBtn) {
-                    nextBtn.disabled = index === cards.length - 1;
+                    nextBtn.disabled = safeIndex === totalSlides - 1;
                 }
             }
 
             // Go to next slide
             function nextSlide() {
-                const nextIndex = (currentIndex + 1) % cards.length;
+                const totalSlides = getTotalSlides();
+                const nextIndex = (currentIndex + 1) % totalSlides;
                 updateCarousel(nextIndex);
             }
 
             // Go to previous slide
             function prevSlide() {
-                const prevIndex = (currentIndex - 1 + cards.length) % cards.length;
+                const totalSlides = getTotalSlides();
+                const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
                 updateCarousel(prevIndex);
             }
 
             // Go to specific slide
             function goToSlide(index) {
-                if (index >= 0 && index < cards.length) {
+                const totalSlides = getTotalSlides();
+                if (index >= 0 && index < totalSlides) {
                     updateCarousel(index);
                 }
             }
@@ -1091,8 +1128,11 @@
             // Pagination dot clicks
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
-                    goToSlide(index);
-                    startAutoPlay(); // Restart auto-play after manual navigation
+                    const totalSlides = getTotalSlides();
+                    if (index < totalSlides) {
+                        goToSlide(index);
+                        startAutoPlay(); // Restart auto-play after manual navigation
+                    }
                 });
             });
 
