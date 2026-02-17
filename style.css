@@ -2395,6 +2395,10 @@ body.mobile-menu-open {
     padding: var(--section-pad) 5%;
   }
 
+  .testimonials-track {
+    gap: 0;
+  }
+
   .testimonials-header {
     margin-bottom: 3rem;
   }
