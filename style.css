@@ -2170,7 +2170,7 @@ body.mobile-menu-open {
 }
 
 .testimonial-card {
-  min-width: 100%;
+  width: 100%;
   flex-shrink: 0;
   padding: 3.5rem;
   opacity: 0;
@@ -2400,6 +2400,10 @@ body.mobile-menu-open {
 
   .testimonials-track {
     gap: 0;
+  }
+
+  .testimonial-card {
+    width: 100%;
   }
 
   .testimonials-header {
@@ -3354,6 +3358,6 @@ footer {
 
 @media (min-width: 1025px) {
   .testimonial-card {
-    min-width: calc(50% - 12px);
+    width: calc(50% - 12px);
   }
 }
