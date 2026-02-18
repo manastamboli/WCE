@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WCE IELTS Preparation - Your First Step Towards a Global Future</title>
+    <title>WCE Germany - Your First Step Towards a Global Future</title>
 
     <!-- DNS Prefetch & Preconnect for external resources -->
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -1222,68 +1222,58 @@
 
         // Apply Now Form Functionality
         function initApplyForm() {
-            const applyForm = document.getElementById('applyForm');
-            const heroApplyForm = document.getElementById('heroApplyForm');
+            const forms = document.querySelectorAll('form.apply-form, form.contact-form');
 
-            // Handle main apply form
-            if (applyForm) {
-                setupFormValidation(applyForm, 'fullName', 'contactNumber', 'email', 'areaOfInterest');
-            }
-
-            // Handle hero apply form
-            if (heroApplyForm) {
-                setupFormValidation(heroApplyForm, 'heroFullName', 'heroContactNumber', 'heroEmail', 'heroAreaOfInterest');
-            }
+            forms.forEach(form => {
+                if (form.querySelector('button[type="submit"]')) {
+                    setupFormValidation(form);
+                }
+            });
         }
 
-        function setupFormValidation(form, fullNameId, contactNumberId, emailId, areaOfInterestId) {
+        function setupFormValidation(form) {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
-                // Get form elements
-                const formData = {
-                    fullName: document.getElementById(fullNameId).value.trim(),
-                    contactNumber: document.getElementById(contactNumberId).value.trim(),
-                    email: document.getElementById(emailId).value.trim(),
-                    areaOfInterest: document.getElementById(areaOfInterestId).value
-                };
+                const emailInput = form.querySelector('input[name="email"]');
+                const phoneInput = form.querySelector('input[name="phone"]');
 
-                // Basic validation
-                if (!formData.fullName || !formData.contactNumber || !formData.email || !formData.areaOfInterest) {
-                    // HTML5 validation will show native messages
+                if (!form.checkValidity()) {
                     form.reportValidity();
                     return;
                 }
 
                 // Email validation
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(formData.email)) {
+                if (emailInput && !emailRegex.test(emailInput.value.trim())) {
                     alert('Please enter a valid email address');
                     return;
                 }
 
                 // Phone validation (basic)
                 const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-                if (!phoneRegex.test(formData.contactNumber)) {
+                if (phoneInput && !phoneRegex.test(phoneInput.value.trim())) {
                     alert('Please enter a valid contact number');
                     return;
                 }
 
-                // If validation passes, you can submit the form here
-                // For now, we'll just show a success message
                 const submitBtn = form.querySelector('.form-submit-btn');
-                const originalText = submitBtn.textContent;
+                const originalText = submitBtn ? submitBtn.textContent : '';
 
-                submitBtn.textContent = 'Submitting...';
-                submitBtn.disabled = true;
+                if (submitBtn) {
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.disabled = true;
+                }
 
                 // Simulate form submission (replace with actual API call)
                 setTimeout(() => {
-                    alert('Thank you for your application! Our team will contact you soon.');
                     form.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }, 1500);
+                    if (submitBtn) {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                    window.location.href = 'thankyou.html';
+                }, 900);
             });
 
             // Real-time validation feedback
