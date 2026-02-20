@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCE Italy - Your Gateway to Mediterranean Excellence</title>
+
+    <!-- DNS Prefetch & Preconnect for external resources -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="style.css" as="style">
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload critical font with font-display swap -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+
+    <!-- Defer non-critical CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+    <!-- SVG Mask Definition (Alternative to clip-path) -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="hero-curve-mask" clipPathUnits="objectBoundingBox">
+                <ellipse cx="0.5" cy="0" rx="0.5" ry="1" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="public/images/logo.webp" alt="WCE - Wisdom Career Education" class="logo-img"
+                        loading="eager" decoding="async">
+                    
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Why Italy</a></li>
+                <li class="nav-item"><a href="#study-areas" class="nav-link">Study Areas</a></li>
+                
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Success Stories</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <a href="#contact" class="btn btn-get-started">Talk to an Expert</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <ul class="nav-menu mobile-menu" role="menu">
+        <div class="mobile-menu-header">
+            <img src="public/images/logo.webp" alt="WCE Logo" class="mobile-logo" loading="lazy" decoding="async">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <li class="nav-item"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link" role="menuitem">Why Study in Italy</a></li>
+        <li class="nav-item"><a href="#study-areas" class="nav-link" role="menuitem">Study Areas</a></li>
+        <li class="nav-item"><a href="#wce-advantage" class="nav-link" role="menuitem">WCE Advantage</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link" role="menuitem">Success Stories</a></li>
+        <li class="nav-item"><a href="#faq" class="nav-link" role="menuitem">FAQs</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link" role="menuitem">Contact Us</a></li>
+
+        <div class="mobile-auth-buttons">
+            <a href="#contact" class="btn btn-get-started">Talk to an Expert</a>
+        </div>
+    </ul>
+
+    <section class="hero" id="home">
+        <div class="hero-bg" style="background: linear-gradient(135deg, rgba(0,30,50,0.68), rgba(200,30,30,0.45)), url('https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat; background-attachment: fixed;"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="hero-topline">
+                        <img src="public/flages/it.svg" alt="Italy" class="flag-icon">
+                        <img src="public/flages/it.svg" alt="Italy" class="flag-icon">
+                    </div>
+                    <h1 class="hero-title">Study in World-Class Universities in Italy</h1>
+                    <p class="hero-subheadline">Immerse Yourself in Renaissance Culture with Affordable Excellence. Your path to Italian education excellence starts now!</p>
+
+                    <p class="hero-description"><strong>Premium Education with Culturally Rich Experience.</strong></p>
+
+                    <div class="hero-cta">
+                        <a href="#apply" class="btn-hero-primary">APPLY NOW <span class="urgency">
+                            <i class="fas fa-clock"></i> Seats Filling Fast!</span></a>
+                        <a href="#about" class="btn-hero-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="hero-form-wrapper">
+                    <div class="apply-form-wrapper">
+                        <div class="apply-form-header">
+                            <h2>Begin Your Italian Adventure! <small>(Limited Spots Remaining!)</small></h2>
+                            <p>Quick application — our team will reach out within 24 hours.</p>
+                        </div>
+
+                        <form class="apply-form" id="heroApplyForm" novalidate>
+                            <div class="form-group">
+                                <label for="heroFullName">Name <span class="required">*</span></label>
+                                <div class="form-input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="heroFullName" name="fullName" placeholder="Your full name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="heroEmail">Email <span class="required">*</span></label>
+                                <div class="form-input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="heroEmail" name="email" placeholder="you@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="heroPhone">Phone Number <span class="required">*</span></label>
+                                <div class="form-input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="heroPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="heroCourse">Preferred Course</label>
+                                <div class="form-input-wrapper">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <select id="heroCourse" name="preferredCourse">
+                                        <option value="">Select course</option>
+                                        <option>Engineering & Architecture</option>
+                                        <option>Fashion & Design</option>
+                                        <option>Art History & Culture</option>
+                                        <option>Business & Economics</option>
+                                        <option>Healthcare & Sciences</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="heroCity">Preferred City</label>
+                                <div class="form-input-wrapper">
+                                    <i class="fas fa-city"></i>
+                                    <input type="text" id="heroCity" name="city" placeholder="E.g., Rome, Milan, Bologna">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="form-submit-btn">APPLY NOW <span class="urgency-inline"><i class="fas fa-clock"></i> Seats Filling Fast!</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About WCE Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Study in Italy</h2>
+            </div>
+
+            <div class="about-intro">
+                <p>
+                    Italy boasts a rich academic heritage with universities at the forefront of European innovation and tradition. Combining affordable tuition costs with access to a vibrant cultural ecosystem, Italian universities offer students an unparalleled learning experience.
+                </p>
+                <p>
+                    Pursue degrees in English across diverse fields, benefit from centuries of academic excellence, access funding opportunities, and secure pathways for career development across Europe. Experience Mediterranean lifestyle while earning a globally recognized degree.
+                </p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Legacy & Excellence</h3>
+                    <p>Universities with centuries of academic prestige and tradition.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-euro-sign"></i></div>
+                    <h3>Affordable European Education</h3>
+                    <p>Competitive tuition fees with excellent value for international students.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-book"></i></div>
+                    <h3>English-Taught Programs</h3>
+                    <p>Comprehensive degrees in English across contemporary disciplines.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Cultural Immersion</h3>
+                    <p>Live and study in the heart of European art, history, and renaissance culture.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>European Network Access</h3>
+                    <p>Build connections across Europe's business and academic hubs.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Global Recognition</h3>
+                    <p>Degrees valued worldwide with strong alumni networks internationally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Popular Study Areas -->
+    <section class="study-areas" id="study-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Discover Your Specialty</h2>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon"><i class="fas fa-building"></i></div>
+                    <h4>Engineering & Architecture</h4>
+                    <p>Cutting-edge design and construction technology.
+                        Learn from centuries of architectural innovation.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h4>Fashion & Design</h4>
+                    <p>World-leading programs in fashion, luxury, and creative design.
+                        Study in the global fashion capital.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon"><i class="fas fa-landmark"></i></div>
+                    <h4>Art History & Culture</h4>
+                    <p>Immersive programs in art theory, restoration, and cultural studies.
+                        Learn in unprecedented cultural settings.</p>
+                </div>
+
+                <div class="area-card area-card-wide">
+                    <div class="area-icon"><i class="fas fa-line-chart"></i></div>
+                    <h4>Business & Economics</h4>
+                    <p>Master's programs in management, finance, and international economics.
+                        Develop competencies for global business.</p>
+                </div>
+
+                <div class="area-card area-card-wide">
+                    <div class="area-icon"><i class="fas fa-flask"></i></div>
+                    <h4>Healthcare & Sciences</h4>
+                    <p>Advanced programs in medicine, pharmaceutical sciences, and biotechnology.
+                        Train at institutions leading European research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-header">
+            <h2>Success Stories from Italy</h2>
+            <p>Hear from students who chose Italian universities with WCE and transformed their futures.</p>
+        </div>
+
+        <div class="testimonials-carousel-wrapper">
+            <button class="carousel-arrow prev" aria-label="Previous testimonial">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="testimonials-carousel" role="region" aria-label="Student testimonials carousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating" aria-label="5 star rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"WCE helped me navigate the application process seamlessly. Now I'm studying Fashion Design at a top Milan university. The combination of excellence and culture is incredible!"</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-icon"><i class="fas fa-user-graduate"></i></div>
+                                <div class="testimonial-info">
+                                    <div class="testimonial-name">Deepa M.</div>
+                                    <div class="testimonial-designation">M.A. Fashion Design</div>
+                                    <div class="testimonial-details">Milan, Italy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating" aria-label="5 star rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Living in Rome while pursuing my Masters in Art History has been transformative. WCE's guidance made everything smooth, from admissions to visa support."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-icon"><i class="fas fa-user-graduate"></i></div>
+                                <div class="testimonial-info">
+                                    <div class="testimonial-name">Arjun S.</div>
+                                    <div class="testimonial-designation">M.A. Art History</div>
+                                    <div class="testimonial-details">Rome, Italy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating" aria-label="5 star rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"My MBA from Bologna has opened doors across Europe. WCE's university selection was spot-on for my career aspirations. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-icon"><i class="fas fa-user-graduate"></i></div>
+                                <div class="testimonial-info">
+                                    <div class="testimonial-name">Priya P.</div>
+                                    <div class="testimonial-designation">MBA International Business</div>
+                                    <div class="testimonial-details">Bologna, Italy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating" aria-label="5 star rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Enrolled in a Master's in Architecture in Florence with WCE's support. The blend of cutting-edge education and living in a Renaissance city has been unforgettable!"</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-icon"><i class="fas fa-user-graduate"></i></div>
+                                <div class="testimonial-info">
+                                    <div class="testimonial-name">Vikram R.</div>
+                                    <div class="testimonial-designation">M.Arch Architecture</div>
+                                    <div class="testimonial-details">Florence, Italy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-arrow next" aria-label="Next testimonial">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-pagination" role="tablist" aria-label="Testimonials pagination">
+                <button class="pagination-dot active" aria-selected="true" aria-label="Go to testimonial 1"></button>
+                <button class="pagination-dot" aria-selected="false" aria-label="Go to testimonial 2"></button>
+                <button class="pagination-dot" aria-selected="false" aria-label="Go to testimonial 3"></button>
+                <button class="pagination-dot" aria-selected="false" aria-label="Go to testimonial 4"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section" id="faqs">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Italy Study FAQs</h2>
+                <p>Answers to your questions about studying at Italian universities and your journey with WCE.</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Are Italian universities affordable for international students?</summary>
+                    <div class="faq-answer">
+                        <p>Yes! Italian universities offer competitive tuition fees, especially compared to other Western European countries, with many programs priced very affordably.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I study in English at Italian universities?</summary>
+                    <div class="faq-answer">
+                        <p>Absolutely. Italian universities offer a extensive range of Master's and some Bachelor's programs taught entirely in English.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What are the typical admission requirements?</summary>
+                    <div class="faq-answer">
+                        <p>Requirements typically include Bachelor's degree transcript, English language proficiency (IELTS/TOEFL for graduate programs), CV, and statement of purpose.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How does WCE support my Italy applications?</summary>
+                    <div class="faq-answer">
+                        <p>WCE provides university selection, application preparation, document compilation, visa guidance, and pre-departure orientation for your Italy journey.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Are scholarships available for India students?</summary>
+                    <div class="faq-answer">
+                        <p>Yes. Many Italian universities and external organizations offer scholarships based on merit or financial need. WCE helps identify and apply for suitable options.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What are career prospects after studying in Italy?</summary>
+                    <div class="faq-answer">
+                        <p>Graduates can pursue career opportunities across Italy and Europe with strong networks in business and research sectors. Long-term residency and work pathways are available.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- The WCE Advantage -->
+    <section class="wce-advantage" id="wce-advantage">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose WCE for Italy?</h2>
+            </div>
+
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Expert University Matching</h3>
+                    <p>We match your profile to Italy's best universities aligned to your career goals and preferences.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-passport"></i></div>
+                    <h3>Comprehensive Visa Support</h3>
+                    <p>Navigate Italian visa requirements and student residence permits with expert guidance.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Pre-Arrival Preparation</h3>
+                    <p>Understand Italian lifestyle, housing options, and student culture before arrival.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-star"></i></div>
+                    <h3>Proven Success Record</h3>
+                    <p>Hundreds of successful admissions to top Italian universities documented.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="apply"></div>
+    <!-- Contact Us Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Start Your Italy Journey</h2>
+                <p class="section-subtitle">Get personalized guidance for your Italian university application.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <div class="contact-badge">Italian Universities</div>
+                    <h3>Craft your pathway to Italian excellence</h3>
+                    <p>Get expert guidance on university selection, program fit, document preparation, and navigating Italian admissions. Move from consideration to confirmed admission with clarity and confidence.</p>
+
+                    <div class="contact-highlights">
+                        <div class="contact-highlight">
+                            <h4>Program Matching</h4>
+                            <p>Find universities and programs aligned to your ambitions.</p>
+                        </div>
+                        <div class="contact-highlight">
+                            <h4>Application Strategy</h4>
+                            <p>SOP, transcripts, references, and Italian-specific requirements simplified.</p>
+                        </div>
+                        <div class="contact-highlight">
+                            <h4>Financial Planning</h4>
+                            <p>Explore scholarships and plan your financial strategy effectively.</p>
+                        </div>
+                    </div>
+
+                    <ul class="contact-points">
+                        <li><i class="fas fa-check-circle"></i> Personalized university and program recommendations</li>
+                        <li><i class="fas fa-check-circle"></i> Complete visa and residency guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Pre-departure checklist and cultural orientation</li>
+                    </ul>
+
+                    <div class="seats-pulse" aria-live="polite">
+                        <span class="pulse-dot"></span>
+                        <span class="pulse-text">Enrollments Open</span>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contactName">Full Name <span class="required">*</span></label>
+                            <div class="form-input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="contactName" name="fullName" placeholder="Your full name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email <span class="required">*</span></label>
+                            <div class="form-input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number <span class="required">*</span></label>
+                            <div class="form-input-wrapper">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="contactPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactCourse">Area of Interest</label>
+                            <div class="form-input-wrapper">
+                                <i class="fas fa-graduation-cap"></i>
+                                <select id="contactCourse" name="preferredCourse">
+                                    <option value="">Select interest area</option>
+                                    <option>Engineering & Architecture</option>
+                                    <option>Fashion & Design</option>
+                                    <option>Art History & Culture</option>
+                                    <option>Business & Economics</option>
+                                    <option>Healthcare & Sciences</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactCity">Preferred City</label>
+                            <div class="form-input-wrapper">
+                                <i class="fas fa-city"></i>
+                                <input type="text" id="contactCity" name="city" placeholder="E.g., Milan, Rome, Bologna">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">Schedule Your Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-col-desc">
+                <img src="public/images/logo.webp" alt="WCE - Wisdom Career Education" class="footer-logo-img"
+                    loading="lazy" decoding="async">
+                <p>WCE supports students in applying to Italian universities with expert guidance on program selection, application preparation, and complete admission support.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home" style="color: #fff; text-decoration: none;">Home</a></li>
+                    <li><a href="#about" style="color: #fff; text-decoration: none;">Why Study in Italy</a></li>
+                    <li><a href="#study-areas" style="color: #fff; text-decoration: none;">Study Areas</a></li>
+                    <li><a href="#wce-advantage" style="color: #fff; text-decoration: none;">WCE Advantage</a></li>
+                    <li><a href="#testimonials" style="color: #fff; text-decoration: none;">Success Stories</a></li>
+                    <li><a href="#contact" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><button type="button" class="footer-brochure-btn brochure-trigger">Download Brochure</button></li>
+                    <li><a href="#faq" style="color: #fff; text-decoration: none;">FAQs</a></li>
+                    <li><a href="tel:+919565595055" style="color: #fff; text-decoration: none;"><i class="fas fa-phone" style="margin-right: 8px;"></i>+91 9565595055</a></li>
+                    <li><a href="mailto:info@wisdomcareereducation.org" style="color: #fff; text-decoration: none;"><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@wisdomcareereducation.org</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <div class="footer-bottom-content">
+                <p class="copyright">
+                    Copyright 2026, All Rights Reserved.
+                </p>
+                <div>
+                    <span>Rome</span>
+                    <span class="footer-separator">|</span>
+                    <span>Milan</span>
+                    <span class="footer-separator">|</span>
+                    <span>Bologna</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Footer / Bottom CTA -->
+    <div class="sticky-footer-cta" role="region" aria-label="Ready to Start">
+        <div class="sticky-inner container">
+            <div class="sticky-copy">
+                <h3>Ready to Discover Italy?</h3>
+                <p>Let's Connect - <a href="tel:+919565595055" class="sticky-phone-link">9565595055</a></p>
+                <small>*T&C Apply.</small>
+            </div>
+            <div class="sticky-actions">
+                <button type="button" class="btn btn-secondary brochure-trigger">Download Brochure</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky Bottom Bar -->
+    <div class="mobile-sticky-bar">
+        <a href="tel:+919565595055" class="sticky-item phone">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            <span>Call</span>
+        </a>
+        <a href="https://wa.me/+919565595055" class="sticky-item whatsapp" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.506z" />
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+        <button type="button" class="sticky-item brochure" aria-label="Open brochure form">
+            <i class="fas fa-file-download"></i>
+            <span>Brochure</span>
+        </button>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" aria-hidden="true">
+        <div class="contact-modal-overlay" data-close="true"></div>
+        <div class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+            <button type="button" class="contact-modal-close" aria-label="Close"></button>
+            <h3 id="contactModalTitle">Download the Italy Study Brochure</h3>
+            <p>Discover Italian university options, eligibility requirements, and your pathway to studying in Italy.</p>
+            <form class="contact-form" id="contactModalForm" novalidate>
+                <div class="form-group">
+                    <label for="contactModalName">Full Name <span class="required">*</span></label>
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="contactModalName" name="fullName" placeholder="Your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactModalEmail">Email <span class="required">*</span></label>
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="contactModalEmail" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactModalPhone">Phone Number <span class="required">*</span></label>
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="contactModalPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
+                    </div>
+                </div>
+                <a href="public/images/hero-poster.webp" class="form-submit-btn brochure-download" download>Download Brochure</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.header');
+            const navItems = document.querySelectorAll('.nav-menu:not(.mobile-menu) .nav-item.has-dropdown');
+            const mobileNavItems = document.querySelectorAll('.nav-menu.mobile-menu .nav-item.has-dropdown');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.nav-menu.mobile-menu');
+            const mobileOverlay = document.querySelector('.mobile-overlay');
+            const mobileClose = document.querySelector('.mobile-menu-close');
+            const body = document.body;
+
+            // Scroll detection for sticky header
+            let lastScrollY = window.scrollY;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > 50) {
+                    header.classList.add('scrolled');
+                    body.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                    body.classList.remove('header-scrolled');
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            // Throttled scroll handler
+            let ticking = false;
+            function handleScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                    setTimeout(() => { ticking = false; }, 10);
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+
+            // Desktop hover behavior
+            if (window.innerWidth > 1024) {
+                navItems.forEach(item => {
+                    const dropdown = item.querySelector('.dropdown');
+
+                    // Open dropdown on nav-item hover
+                    item.addEventListener('mouseenter', function () {
+                        // Close other dropdowns
+                        navItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                                otherItem.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false');
+                            }
+                        });
+
+                        // Open current dropdown
+                        this.classList.add('active');
+                        this.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'true');
+                    });
+
+                    // Keep dropdown open when hovering over it
+                    if (dropdown) {
+                        dropdown.addEventListener('mouseenter', function () {
+                            item.classList.add('active');
+                            item.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'true');
+                        });
+                    }
+                });
+            }
+
+            // Mobile menu functionality
+            function openMobileMenu() {
+                mobileMenu.classList.add('active');
+                mobileOverlay.classList.add('active');
+                mobileToggle.classList.add('active');
+                body.classList.add('mobile-menu-open');
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                body.classList.remove('mobile-menu-open');
+
+                // Close all mobile dropdowns
+                mobileNavItems.forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            // Mobile toggle click
+            mobileToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            // Mobile close button
+            mobileClose.addEventListener('click', closeMobileMenu);
+
+            // Mobile overlay click
+            mobileOverlay.addEventListener('click', closeMobileMenu);
+
+            // Mobile accordion behavior
+            mobileNavItems.forEach(item => {
+                const navLink = item.querySelector('.nav-link');
+
+                navLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other dropdowns (accordion behavior)
+                    mobileNavItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    if (isActive) {
+                        item.classList.remove('active');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        item.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+                if (!link.closest('.has-dropdown')) {
+                    link.addEventListener('click', closeMobileMenu);
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    // Close desktop dropdowns
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Close mobile menu
+                    if (mobileMenu.classList.contains('active')) {
+                        closeMobileMenu();
+                    }
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 1024) {
+                    closeMobileMenu();
+
+                    // Re-enable hover behavior for desktop
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+
+            // Prevent dropdown close when clicking inside
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            });
+
+            // Close desktop dropdowns when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.nav-item.has-dropdown') && !e.target.closest('.dropdown') && !e.target.closest('.mobile-menu-toggle')) {
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+
+            // Initialize header state
+            updateHeader();
+
+            // Hero Video Handling
+            const heroVideo = document.querySelector('.hero-video');
+            const heroVideoContainer = document.querySelector('.hero-video-container');
+
+            if (heroVideo) {
+                // Handle video load error - fallback to background image
+                heroVideo.addEventListener('error', function () {
+                    console.log('Video failed to load, using fallback background');
+                    heroVideoContainer.style.background = 'linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80") center/cover';
+                    heroVideo.style.display = 'none';
+                });
+
+                // Ensure video plays on mobile
+                heroVideo.addEventListener('loadeddata', function () {
+                    if (heroVideo.paused) {
+                        heroVideo.play().catch(function (error) {
+                            console.log('Video autoplay failed:', error);
+                        });
+                    }
+                });
+
+                // Respect reduced motion preference
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    heroVideo.pause();
+                }
+            }
+
+            // Simple animation for hero cards
+            function animateHeroCards() {
+                const heroCards = document.querySelectorAll('.card');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, index * 100);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                heroCards.forEach(card => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    observer.observe(card);
+                });
+            }
+
+            // Initialize card animations
+            animateHeroCards();
+
+            // Logo Carousel Infinite Scroll
+            function initLogoCarousel() {
+                const logoTrack = document.getElementById('logoTrack');
+                if (!logoTrack) return;
+
+                // Clone all logo items to create seamless infinite scroll
+                const logoItems = Array.from(logoTrack.children);
+                logoItems.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    logoTrack.appendChild(clone);
+                });
+
+                // Add error handling for missing images
+                const logoImages = logoTrack.querySelectorAll('img');
+                logoImages.forEach(img => {
+                    img.addEventListener('error', function () {
+                        // Hide broken images gracefully
+                        this.parentElement.style.display = 'none';
+                    });
+                });
+            }
+
+            // Initialize logo carousel
+            initLogoCarousel();
+
+            // Initialize testimonials carousel
+            initTestimonialsCarousel();
+
+            // Initialize Apply Now form
+            initApplyForm();
+
+            // Brochure modal
+            const brochureButtons = document.querySelectorAll('.brochure-trigger, .mobile-sticky-bar .sticky-item.brochure');
+            const contactModal = document.querySelector('.contact-modal');
+            const contactModalOverlay = document.querySelector('.contact-modal-overlay');
+            const contactModalClose = document.querySelector('.contact-modal-close');
+
+            function openContactModal() {
+                if (!contactModal) return;
+                contactModal.classList.add('is-open');
+                contactModal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
+            }
+
+            function closeContactModal() {
+                if (!contactModal) return;
+                contactModal.classList.remove('is-open');
+                contactModal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+            }
+
+            if (brochureButtons.length) {
+                brochureButtons.forEach(btn => btn.addEventListener('click', openContactModal));
+            }
+            if (contactModalOverlay) {
+                contactModalOverlay.addEventListener('click', closeContactModal);
+            }
+            if (contactModalClose) {
+                contactModalClose.addEventListener('click', closeContactModal);
+            }
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeContactModal();
+                }
+            });
+        });
+
+        // Testimonials Carousel Functionality
+        function initTestimonialsCarousel() {
+            const track = document.getElementById('testimonialsTrack');
+            const cards = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.pagination-dot');
+            const prevBtn = document.querySelector('.carousel-arrow.prev');
+            const nextBtn = document.querySelector('.carousel-arrow.next');
+            const carousel = document.querySelector('.testimonials-carousel');
+
+            if (!track || cards.length === 0) return;
+
+            let currentIndex = 0;
+            let autoPlayInterval;
+            const autoPlayDelay = 5000; // 5 seconds
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function getSlidesPerView() {
+                return window.innerWidth >= 1025 ? 2 : 1;
+            }
+
+            function getTotalSlides() {
+                return Math.ceil(cards.length / getSlidesPerView());
+            }
+
+            function updateDots(totalSlides, activeIndex) {
+                dots.forEach((dot, i) => {
+                    if (i < totalSlides) {
+                        dot.style.display = 'inline-flex';
+                        const isActive = i === activeIndex;
+                        dot.classList.toggle('active', isActive);
+                        dot.setAttribute('aria-selected', isActive);
+                        dot.setAttribute('aria-hidden', 'false');
+                    } else {
+                        dot.style.display = 'none';
+                        dot.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+
+            // Update carousel position
+            function updateCarousel(index, animate = true) {
+                const slidesPerView = getSlidesPerView();
+                const totalSlides = getTotalSlides();
+                const safeIndex = Math.max(0, Math.min(index, totalSlides - 1));
+                currentIndex = safeIndex;
+
+                // Update track position
+                const offset = safeIndex * 100;
+                track.style.transform = `translateX(-${offset}%)`;
+
+                // Update active cards
+                const start = safeIndex * slidesPerView;
+                const end = start + slidesPerView;
+                cards.forEach((card, i) => {
+                    card.classList.toggle('active', i >= start && i < end);
+                });
+
+                // Update pagination dots
+                updateDots(totalSlides, safeIndex);
+
+                // Update arrow states
+                if (prevBtn) {
+                    prevBtn.disabled = safeIndex === 0;
+                }
+                if (nextBtn) {
+                    nextBtn.disabled = safeIndex === totalSlides - 1;
+                }
+            }
+
+            // Go to next slide
+            function nextSlide() {
+                const totalSlides = getTotalSlides();
+                const nextIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel(nextIndex);
+            }
+
+            // Go to previous slide
+            function prevSlide() {
+                const totalSlides = getTotalSlides();
+                const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel(prevIndex);
+            }
+
+            // Go to specific slide
+            function goToSlide(index) {
+                const totalSlides = getTotalSlides();
+                if (index >= 0 && index < totalSlides) {
+                    updateCarousel(index);
+                }
+            }
+
+            // Auto-play functionality
+            function startAutoPlay() {
+                stopAutoPlay();
+                if (!prefersReducedMotion) {
+                    autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+                }
+            }
+
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
+                }
+            }
+
+            // Event listeners
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    startAutoPlay(); // Restart auto-play after manual navigation
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    startAutoPlay(); // Restart auto-play after manual navigation
+                });
+            }
+
+            // Pagination dot clicks
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const totalSlides = getTotalSlides();
+                    if (index < totalSlides) {
+                        goToSlide(index);
+                        startAutoPlay(); // Restart auto-play after manual navigation
+                    }
+                });
+            });
+
+            // Pause auto-play on hover
+            if (carousel) {
+                carousel.addEventListener('mouseenter', stopAutoPlay);
+                carousel.addEventListener('mouseleave', startAutoPlay);
+            }
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (carousel && document.activeElement.closest('.testimonials-section')) {
+                    if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        prevSlide();
+                        startAutoPlay();
+                    } else if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        nextSlide();
+                        startAutoPlay();
+                    }
+                }
+            });
+
+            // Touch/swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            if (track) {
+                track.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                track.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    const diff = touchStartX - touchEndX;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            // Swipe left - next
+                            nextSlide();
+                        } else {
+                            // Swipe right - previous
+                            prevSlide();
+                        }
+                        startAutoPlay();
+                    }
+                }
+            }
+
+            // Initialize carousel
+            updateCarousel(0, false);
+            startAutoPlay();
+
+            // Handle window resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    updateCarousel(currentIndex, false);
+                }, 250);
+            });
+        }
+
+        // Apply Now Form Functionality
+        function initApplyForm() {
+            const forms = document.querySelectorAll('form.apply-form, form.contact-form');
+
+            forms.forEach(form => {
+                if (form.querySelector('button[type="submit"]')) {
+                    setupFormValidation(form);
+                }
+            });
+        }
+
+        function setupFormValidation(form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const emailInput = form.querySelector('input[name="email"]');
+                const phoneInput = form.querySelector('input[name="phone"]');
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailInput && !emailRegex.test(emailInput.value.trim())) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+
+                // Phone validation (basic)
+                const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                if (phoneInput && !phoneRegex.test(phoneInput.value.trim())) {
+                    alert('Please enter a valid contact number');
+                    return;
+                }
+
+                const submitBtn = form.querySelector('.form-submit-btn');
+                const originalText = submitBtn ? submitBtn.textContent : '';
+
+                if (submitBtn) {
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.disabled = true;
+                }
+
+                // Simulate form submission (replace with actual API call)
+                setTimeout(() => {
+                    form.reset();
+                    if (submitBtn) {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                    window.location.href = 'thankyou.html';
+                }, 900);
+            });
+
+            // Real-time validation feedback
+            const inputs = form.querySelectorAll('input, select');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function () {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.style.borderColor = '#ef4444';
+                    } else {
+                        this.style.borderColor = '#e5e7eb';
+                    }
+                });
+
+                input.addEventListener('input', function () {
+                    if (this.style.borderColor === 'rgb(239, 68, 68)') {
+                        this.style.borderColor = '#e5e7eb';
+                    }
+                });
+            });
+        }
+
+        // Stats Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const duration = 2000; // 2 seconds
+                const startTime = performance.now();
+
+                function updateCounter(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    // Easing function for smooth animation (ease-out)
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    const currentValue = Math.floor(easeOut * target);
+
+                    counter.textContent = currentValue + suffix;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
+                }
+
+                requestAnimationFrame(updateCounter);
+            });
+        }
+
+        // Intersection Observer for Stats Section
+        const statsSection = document.getElementById('stats-section');
+        let statsAnimated = false;
+
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !statsAnimated) {
+                        statsAnimated = true;
+                        animateCounters();
+                    }
+                });
+            }, {
+                threshold: 0.3, // Trigger when 30% of the section is visible
+                rootMargin: '0px'
+            });
+
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+
+</html>
