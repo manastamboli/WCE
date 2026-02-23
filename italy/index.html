@@ -15,10 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Preload critical CSS -->
-    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="../style.css" as="style">
 
     <!-- Critical CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Preload critical font with font-display swap -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -48,7 +48,7 @@
         <nav class="nav-container">
             <div class="logo-container">
                 <a href="#" class="logo">
-                    <img src="public/images/logo.webp" alt="WCE - Wisdom Career Education" class="logo-img"
+                    <img src="../public/images/logo.webp" alt="WCE - Wisdom Career Education" class="logo-img"
                         loading="eager" decoding="async">
                     
                 </a>
@@ -83,7 +83,7 @@
     <!-- Mobile Menu -->
     <ul class="nav-menu mobile-menu" role="menu">
         <div class="mobile-menu-header">
-            <img src="public/images/logo.webp" alt="WCE Logo" class="mobile-logo" loading="lazy" decoding="async">
+            <img src="../public/images/logo.webp" alt="WCE Logo" class="mobile-logo" loading="lazy" decoding="async">
             <button class="mobile-menu-close" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
@@ -103,13 +103,13 @@
     </ul>
 
     <section class="hero" id="home">
-        <div class="hero-bg" style="background: linear-gradient(135deg, rgba(0,30,50,0.68), rgba(200,30,30,0.45)), url('https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat; background-attachment: fixed;"></div>
+        <div class="hero-bg" style="background: linear-gradient(135deg, rgba(0,30,50,0.68), rgba(200,30,30,0.45)), url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat; background-attachment: fixed;"></div>
         <div class="hero-content-wrapper">
             <div class="hero-layout">
                 <div class="hero-content">
                     <div class="hero-topline">
-                        <img src="public/flages/it.svg" alt="Italy" class="flag-icon">
-                        <img src="public/flages/it.svg" alt="Italy" class="flag-icon">
+                        <img src="../public/flages/it.svg" alt="Italy" class="flag-icon">
+                        <img src="../public/flages/it.svg" alt="Italy" class="flag-icon">
                     </div>
                     <h1 class="hero-title">Study in World-Class Universities in Italy</h1>
                     <p class="hero-subheadline">Immerse Yourself in Renaissance Culture with Affordable Excellence. Your path to Italian education excellence starts now!</p>
@@ -588,7 +588,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col footer-col-desc">
-                <img src="public/images/logo.webp" alt="WCE - Wisdom Career Education" class="footer-logo-img"
+                <img src="../public/images/logo.webp" alt="WCE - Wisdom Career Education" class="footer-logo-img"
                     loading="lazy" decoding="async">
                 <p>WCE supports students in applying to Italian universities with expert guidance on program selection, application preparation, and complete admission support.</p>
             </div>
@@ -697,12 +697,12 @@
                         <input type="tel" id="contactModalPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
                     </div>
                 </div>
-                <a href="public/images/hero-poster.webp" class="form-submit-btn brochure-download" download>Download Brochure</a>
+                <a href="../public/images/hero-poster.webp" class="form-submit-btn brochure-download" download>Download Brochure</a>
             </form>
         </div>
     </div>
 
-    <script src="script.js" defer></script>
+    <script src="../script.js" defer></script>
     <script defer>
         document.addEventListener('DOMContentLoaded', function () {
             const header = document.querySelector('.header');
@@ -1267,7 +1267,7 @@
                         submitBtn.textContent = originalText;
                         submitBtn.disabled = false;
                     }
-                    window.location.href = 'thankyou.html';
+                    window.location.href = '../thankyou.html';
                 }, 900);
             });
 
